@@ -1,0 +1,95 @@
+/* container */
+.container {
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* title */
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* search input */
+#search-input {
+    width: 80%;
+    max-width: 800px;
+    height: 3em;
+    border-radius: 5px;
+    border: 2px solid #007bff;
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+
+/* search button */
+#search-btn {
+    height: 3em;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* search results */
+.result-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* result item */
+.result-item {
+    margin-bottom: 1em;
+}
+
+/* result title */
+.result-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* result description */
+.result-description {
+    margin-bottom: 1em;
+}
+
+/* result url */
+.result-url {
+    font-size: 0.8em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* result url on hover */
+.result-url:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* pagination */
+.pagination {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* page link */
+.page-link {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+/* page link on hover */
+.page-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}

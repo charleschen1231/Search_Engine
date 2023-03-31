@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Search Results</h1>
+        <div class="search-box">
+            <form action="{{ url_for('results') }}" method="POST">
+                <input type="text" name="user_input" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="results">
+            {% if related_docs %}
+                <p>Showing {{ related_docs|length }} results:</p>
+                {% for doc in related_docs %}
+                    <div class="result">
+                        <h3><a href="{{ doc.title_link }}" target="_blank">{{ doc.title }}</a></h3>
+                        <p class="metadata">{{ doc.author }} - {{ doc.publication_year }}</p>
+                        <p class="abstract">{{ doc.content }}</p>
+                        {% if doc.common_keywords %}
+                            <p class="keywords">Common keywords: {{ ', '.join(doc.common_keywords) }}</p>
+                        {% endif %}
+                        <p class="similarity">Cosine similarity: {{ doc.cosine_similarity }}</p>
+                    </div>
+                {% endfor %}
+            {% if precision is defined and recall is defined and fscore is defined and accuracy is defined %}
+                    <hr>
+                    <h3>Evaluation Metrics:</h3>
+                    <table>
+                        <tr>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F-measure</th>
+                            <th>Accuracy</th>
+                        </tr>
+                        <tr>
+                            <td>{{ precision }}</td>
+                            <td>{{ recall }}</td>
+                            <td>{{ fscore }}</td>
+                            <td>{{ accuracy }}</td>
+                        </tr>
+                    </table>
+                {% endif %}
+            {% else %}
+                <p>No results found.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Search Page</title>
+	<style>
+		form {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 50px;
+		}
+
+		input[type="text"] {
+			width: 500px;
+			padding: 10px;
+			margin: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px rgba(0,0,0,0.2);
+			font-size: 18px;
+			font-family: sans-serif;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			font-family: sans-serif;
+		}
+
+		h1 {
+			font-size: 40px;
+			font-weight: normal;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		.search-container {
+			background-color: #f1f1f1;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			margin: 50px auto;
+			max-width: 800px;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.search-container img {
+			display: inline-block;
+			margin: 0 10px;
+			max-height: 60px;
+		}
+
+		.search-container form {
+			display: inline-block;
+			margin-top: 10px;
+			width: 100%;
+		}
+
+		.search-container input[type="text"] {
+			padding: 10px;
+			width: 70%;
+		}
+
+		.search-container input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			cursor: pointer;
+			padding: 10px 20px;
+			width: 30%;
+		}
+	</style>
+</head>
+<body>
+	<div class="search-container">
+		<img src="https://scholar.coventry.com/favicon.ico">
+		<h1>Coventry Scholar Search</h1>
+		<form>
+			<input type="text" name="search" placeholder="Search in Coventry Scholar">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+</body>
+</html>
